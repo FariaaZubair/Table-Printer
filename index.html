@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Table Generator</title>
+    <title>Table Printer</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
-      <label for="table">What table do you want to generate?</label>
-      <input type="number" id="table" /> <br />
-
-      <label for="minLength">From where do you want to start the table?</label>
-      <input type="number" id="minLength" /> <br />
-
-      <label for="maxLength">Where do you want the table to end?</label>
-      <input type="number" id="maxLength" /> <br />
-      <div class="button-group">
-        <button onclick="generate()">Generate Table</button>
-        <button id="clearButton" onclick="clearFields()">Clear</button>
-      </div>
-      <div id="result"></div>
+        <div class="input-group">
+            <label for="table">What table do you want to print?</label>
+            <input type="number" id="table" class="rounded-input" />
+        </div>
+        <div class="input-group-row">
+            <div class="input-group">
+                <label for="minLength">Start from:</label>
+                <input type="number" id="minLength" />
+            </div>
+            <div class="input-group">
+                <label for="maxLength">End at:</label>
+                <input type="number" id="maxLength" />
+            </div>
+        </div>
+        <div class="button-group">
+            <button onclick="generate()">Print</button>
+            <button id="clearButton" onclick="clearFields()">Clear</button>
+        </div>
+        <div id="result-container">
+            <div id="result"></div>
+        </div>
     </div>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
