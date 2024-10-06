@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <label for="table">What table do you want to generate?</label>
+      <input type="number" id="table" /> <br />
+
+      <label for="minLength">From where do you want to start the table?</label>
+      <input type="number" id="minLength" /> <br />
+
+      <label for="maxLength">Where do you want the table to end?</label>
+      <input type="number" id="maxLength" /> <br />
+      <div class="button-group">
+        <button onclick="generate()">Generate Table</button>
+        <button id="clearButton" onclick="clearFields()">Clear</button>
+      </div>
+      <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
